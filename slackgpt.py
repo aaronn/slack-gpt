@@ -114,7 +114,6 @@ def handle_message(event, thread=False):
     history = get_message_history(
         channel_id, user_id, event_ts, limit=25, thread=thread
     )
-    print(history)
         
     # Send "Typing a response..." message
     typing_message = slack_client.chat_postMessage(
